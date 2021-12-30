@@ -1,5 +1,9 @@
 package com.tests;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,7 +24,8 @@ public class RegistrationPageTest extends TestBase {
 	Utility utility;
 	public String sheetName = "NewUser1";
 
-	@BeforeMethod
+
+	@BeforeMethod(groups = "LAND IN/OUT")
 	public void setUp() {
 		initialization();
 		utility = new Utility();
@@ -29,7 +34,7 @@ public class RegistrationPageTest extends TestBase {
 		registrationPage = new RegistrationPage();
 	}
 
-	@Test
+	@Test(groups = "UI FUNCTIONS")
 	public void validatPageTitleTest() {
 		String title = registrationPage.validatePageTitle();
 		Assert.assertEquals(title, "Register Now", "Page title doesnt matched!!");
@@ -43,13 +48,15 @@ public class RegistrationPageTest extends TestBase {
 
 	@Test(dataProvider = "getDatafromExcel")
 	public void insertNewUserDetailsTest(String email, String userName, String pass, String con_pass, String firstName,
-			String lastName, String addr) {
+			String lastName, String addr) throws InterruptedException {
 		registrationPage.insertNewUserDetails(email, userName, pass, con_pass, firstName, lastName, addr);
+		
 		registrationPage.validateCurrentUserName();
 
 	}
 
-	@AfterMethod
+
+	@AfterMethod(groups = "LAND IN/OUT")
 	public void tearDown() {
 		driver.quit();
 	}

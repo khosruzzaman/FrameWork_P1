@@ -4,18 +4,17 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import com.utill.Utility;
 public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
-	public static String conProp = "/Users/khosruzzaman/Desktop/NEW_PROJECTS/PNT_CLASS/MulticartAutomationSuit/src/main/java/com/configurations/config.properties";
+	public static String conProp = "/Users/khosruzzaman/git/FrameWork_P1/src/main/java/com/configurations/config.properties";
 	// Call to constractor
 	public TestBase() {
 		prop = new Properties();

@@ -1,81 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="1" total="2" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="57" started-at="2021-12-28T22:47:50 EST" finished-at="2021-12-28T22:47:50 EST">
+  <suite name="regression_Suit" duration-ms="59891" started-at="2021-12-29T20:34:06 EST" finished-at="2021-12-29T20:35:05 EST">
     <groups>
+      <group name="UI FUNCTIONS">
+        <method signature="RegistrationPageTest.validatPageTitleTest()[pri:0, instance:com.tests.RegistrationPageTest@2e3fc542]" name="validatPageTitleTest" class="com.tests.RegistrationPageTest"/>
+      </group> <!-- UI FUNCTIONS -->
     </groups>
-    <test name="Default test" duration-ms="57" started-at="2021-12-28T22:47:50 EST" finished-at="2021-12-28T22:47:50 EST">
+    <test name="Test" duration-ms="59891" started-at="2021-12-29T20:34:06 EST" finished-at="2021-12-29T20:35:05 EST">
+      <class name="com.tests.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.LoginPageTest@2db7a79b]" name="setUp" is-config="true" duration-ms="6450" started-at="2021-12-29T20:34:06 EST" finished-at="2021-12-29T20:34:12 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validatLoginPageTitleTest()[pri:1, instance:com.tests.LoginPageTest@2db7a79b]" name="validatLoginPageTitleTest" duration-ms="867" started-at="2021-12-29T20:34:12 EST" finished-at="2021-12-29T20:34:13 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatLoginPageTitleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.LoginPageTest@2db7a79b]" name="tearDown" is-config="true" duration-ms="115" started-at="2021-12-29T20:34:13 EST" finished-at="2021-12-29T20:34:13 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.LoginPageTest@2db7a79b]" name="setUp" is-config="true" duration-ms="4824" started-at="2021-12-29T20:34:13 EST" finished-at="2021-12-29T20:34:18 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginTest()[pri:2, instance:com.tests.LoginPageTest@2db7a79b]" name="loginTest" duration-ms="745" started-at="2021-12-29T20:34:18 EST" finished-at="2021-12-29T20:34:19 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.LoginPageTest@2db7a79b]" name="tearDown" is-config="true" duration-ms="88" started-at="2021-12-29T20:34:19 EST" finished-at="2021-12-29T20:34:19 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.LoginPageTest@2db7a79b]" name="setUp" is-config="true" duration-ms="3836" started-at="2021-12-29T20:34:19 EST" finished-at="2021-12-29T20:34:23 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateUserNameTest()[pri:3, instance:com.tests.LoginPageTest@2db7a79b]" name="validateUserNameTest" duration-ms="3052" started-at="2021-12-29T20:34:23 EST" finished-at="2021-12-29T20:34:26 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateUserNameTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.LoginPageTest@2db7a79b]" name="tearDown" is-config="true" duration-ms="143" started-at="2021-12-29T20:34:26 EST" finished-at="2021-12-29T20:34:26 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tests.LoginPageTest -->
       <class name="com.tests.RegistrationPageTest">
-        <test-method status="SKIP" signature="insertNewUserDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tests.RegistrationPageTest@569cfc36]" name="insertNewUserDetailsTest" duration-ms="0" started-at="2021-12-28T22:47:50 EST" data-provider="getDatafromExcel" finished-at="2021-12-28T22:47:50 EST">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[java.lang.NoClassDefFoundError: org/apache/poi/ss/usermodel/Workbook]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.NoClassDefFoundError: org/apache/poi/ss/usermodel/Workbook
-at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:50)
-at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:798)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1259)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NoClassDefFoundError: org/apache/poi/ss/usermodel/Workbook
-at java.lang.ClassLoader.defineClass1(Native Method)
-at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
-at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
-at java.net.URLClassLoader.defineClass(URLClassLoader.java:468)
-at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
-at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
-at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
-at java.security.AccessController.doPrivileged(Native Method)
-at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
-at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
-at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-at com.utill.Utility.getTestData(Utility.java:35)
-at com.tests.RegistrationPageTest.getDatafromExcel(RegistrationPageTest.java:41)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77)
-at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46)
-... 25 more
-Caused by: java.lang.ClassNotFoundException: org.apache.poi.ss.usermodel.Workbook
-at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
-at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
-at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
-at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
-... 46 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.RegistrationPageTest@2e3fc542]" name="setUp" is-config="true" duration-ms="4873" started-at="2021-12-29T20:34:47 EST" finished-at="2021-12-29T20:34:52 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="insertNewUserDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tests.RegistrationPageTest@2e3fc542]" name="insertNewUserDetailsTest" duration-ms="7671" started-at="2021-12-29T20:34:52 EST" data-provider="getDatafromExcel" finished-at="2021-12-29T20:34:59 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[noemail@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Noone]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234n]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234n]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Regression]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[NIETHER]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- insertNewUserDetailsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.RegistrationPageTest@2e3fc542]" name="tearDown" is-config="true" duration-ms="97" started-at="2021-12-29T20:34:59 EST" finished-at="2021-12-29T20:35:00 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.RegistrationPageTest@2e3fc542]" name="setUp" is-config="true" duration-ms="4935" started-at="2021-12-29T20:35:00 EST" finished-at="2021-12-29T20:35:05 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validatPageTitleTest()[pri:0, instance:com.tests.RegistrationPageTest@2e3fc542]" name="validatPageTitleTest" duration-ms="761" started-at="2021-12-29T20:35:05 EST" finished-at="2021-12-29T20:35:05 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatPageTitleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.RegistrationPageTest@2e3fc542]" name="tearDown" is-config="true" duration-ms="96" started-at="2021-12-29T20:35:05 EST" finished-at="2021-12-29T20:35:05 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.tests.RegistrationPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.tests.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.HomePageTest@7276c8cd]" name="setUp" is-config="true" duration-ms="4846" started-at="2021-12-29T20:34:26 EST" finished-at="2021-12-29T20:34:31 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="HomePageTitle()[pri:1, instance:com.tests.HomePageTest@7276c8cd]" name="HomePageTitle" duration-ms="32" started-at="2021-12-29T20:34:31 EST" finished-at="2021-12-29T20:34:31 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomePageTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.HomePageTest@7276c8cd]" name="tearDown" is-config="true" duration-ms="106" started-at="2021-12-29T20:34:31 EST" finished-at="2021-12-29T20:34:31 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.HomePageTest@7276c8cd]" name="setUp" is-config="true" duration-ms="4925" started-at="2021-12-29T20:34:31 EST" finished-at="2021-12-29T20:34:36 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateLoginSourceButtonTest()[pri:2, instance:com.tests.HomePageTest@7276c8cd]" name="validateLoginSourceButtonTest" duration-ms="198" started-at="2021-12-29T20:34:36 EST" finished-at="2021-12-29T20:34:36 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginSourceButtonTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.HomePageTest@7276c8cd]" name="tearDown" is-config="true" duration-ms="91" started-at="2021-12-29T20:34:36 EST" finished-at="2021-12-29T20:34:36 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.HomePageTest@7276c8cd]" name="setUp" is-config="true" duration-ms="5008" started-at="2021-12-29T20:34:36 EST" finished-at="2021-12-29T20:34:41 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateAboutUsLinkTest()[pri:3, instance:com.tests.HomePageTest@7276c8cd]" name="validateAboutUsLinkTest" duration-ms="900" started-at="2021-12-29T20:34:41 EST" finished-at="2021-12-29T20:34:42 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAboutUsLinkTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.HomePageTest@7276c8cd]" name="tearDown" is-config="true" duration-ms="170" started-at="2021-12-29T20:34:42 EST" finished-at="2021-12-29T20:34:42 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.HomePageTest@7276c8cd]" name="setUp" is-config="true" duration-ms="3970" started-at="2021-12-29T20:34:42 EST" finished-at="2021-12-29T20:34:46 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyCurrencyListTest()[pri:4, instance:com.tests.HomePageTest@7276c8cd]" name="verifyCurrencyListTest" duration-ms="575" started-at="2021-12-29T20:34:46 EST" finished-at="2021-12-29T20:34:47 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCurrencyListTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.HomePageTest@7276c8cd]" name="tearDown" is-config="true" duration-ms="104" started-at="2021-12-29T20:34:47 EST" finished-at="2021-12-29T20:34:47 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tests.HomePageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- regression_Suit -->
 </testng-results>

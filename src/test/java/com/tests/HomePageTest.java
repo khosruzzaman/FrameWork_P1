@@ -1,5 +1,9 @@
 package com.tests;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -12,6 +16,7 @@ import com.pages.HomePage;
 public class HomePageTest extends TestBase {
 
 	HomePage homePage;
+
 
 	@BeforeMethod
 	public void setUp() {
@@ -48,6 +53,7 @@ public class HomePageTest extends TestBase {
 		//System.out.println("Assertion is passed!!");
 
 	}
+
 
 	@AfterMethod
 	public void tearDown() {

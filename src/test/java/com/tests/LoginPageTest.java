@@ -1,5 +1,13 @@
 package com.tests;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,6 +24,7 @@ public class LoginPageTest extends TestBase {
 	public LoginPageTest() {
 		super();
 	}
+
 
 	@BeforeMethod
 	public void setUp() {
@@ -42,6 +51,7 @@ public class LoginPageTest extends TestBase {
 		Thread.sleep(2000);
 		loginPage.validateCurrentUserName();
 	}
+
 
 	@AfterMethod
 	public void tearDown() {

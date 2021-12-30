@@ -1,16 +1,19 @@
 package com.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.TestBase.TestBase;
+import com.utill.Utility;
 
 public class RegistrationPage extends TestBase {
 
 	//PAGE FACTORY / OBJECT REPOSITORY
 	
-	@FindBy(xpath = "//*[@id='dLabellogin']/span")
+	@FindBy(xpath="//*[@id='dLabellogin']")
 	WebElement login_Source_Button;
 	
 	@FindBy(xpath = "//*[@id='jqSignup']")
@@ -19,26 +22,29 @@ public class RegistrationPage extends TestBase {
 	@FindBy(xpath = "//button/span")
 	WebElement current_User_name;
 	
-	@FindBy(xpath = "//*[@id='txtEmail']")
+	@FindBy(xpath ="//*[@id=\'txtEmail\']")
 	WebElement email_fild;
 	
-	@FindBy(xpath = "//*[@placeholder='User Name *']")
+	@FindBy(xpath ="//*[@id=\'txtUserName\']")
 	WebElement user_Name;
 	
-	@FindBy(css = "#txtPassword")
+	@FindBy(xpath ="//*[@id=\'txtPassword\']")
 	WebElement password_1;
 	
-	@FindBy(css = "#txtCnfPassword")
+	@FindBy(xpath ="//*[@id=\'txtCnfPassword\']")
 	WebElement confirm_Pssword;
 	
-	@FindBy(xpath = "//*[name='txtFirstName']")
+	@FindBy(xpath ="//*[@id=\'txtFirstName\']")
 	WebElement first_Name;
 	
-	@FindBy(xpath = "//*[name='txtLastName']")
+	@FindBy(xpath ="//*[@id=\'txtLastName\']")
 	WebElement last_name;
 	
-	@FindBy(xpath = "//*[name='custom_field_2']")
+	@FindBy(xpath = "//*[@placeholder='Address *']")
 	WebElement address;
+	
+	@FindBy(xpath ="//*[@id=\'btnRegister\']")
+	WebElement btn_Register;
 	
 	//Initialized page factory
 	public RegistrationPage() {
@@ -50,12 +56,12 @@ public class RegistrationPage extends TestBase {
 		login_Source_Button.click();
 		signup_Button.click();
 		String pageTitle = driver.getTitle();
-		System.out.println("The Login Page Title is : "+ pageTitle);
+		System.out.println("The Register Page Title is : "+ pageTitle);
 		return pageTitle;
 	}
 	
 	public void insertNewUserDetails(String email, String userName, String pass, 
-			String con_pass, String firstName, String lastName, String addr) {
+			String con_pass, String firstName, String lastName, String addr) throws InterruptedException  {
 		
 		login_Source_Button.click();
 		signup_Button.click();
@@ -66,6 +72,10 @@ public class RegistrationPage extends TestBase {
 		first_Name.sendKeys(firstName);
 		last_name.sendKeys(lastName);
 		address.sendKeys(addr);	
+		btn_Register.click();
+		Thread.sleep(5000);
+		driver.navigate().back();
+
 	}
 	
 	
@@ -74,14 +84,6 @@ public class RegistrationPage extends TestBase {
 		System.out.println("Logged User Name is :"+currentUser);
 		return currentUser;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }
