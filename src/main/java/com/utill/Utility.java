@@ -1,14 +1,21 @@
 package com.utill;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.TestBase.TestBase;
 
@@ -50,7 +57,17 @@ public class Utility extends TestBase {
 	public static WebElement selectClass(WebElement value) {
 		Select select = new Select(value);
 		return value;
-
 	}
+	public static void takeScreenShoot() throws IOException {
+		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String curentDir = System.getProperty("user.dir");
+		FileUtils.copyFile(srcFile, new File(curentDir+"/Screen_Shoots/"+System.currentTimeMillis()+".png"));
+	}
+	public static void expliciteWait(String locator) {
+		WebDriverWait wait = new WebDriverWait(driver, IMPLECITELY_WAIT_TIME);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(locator)));
+		
+	
+}
 
 }

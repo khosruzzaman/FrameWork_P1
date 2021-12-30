@@ -37,7 +37,7 @@ public class LoginPageTest extends TestBase {
 	public void validatLoginPageTitleTest() throws InterruptedException {
 		loginTest();
 		String title = loginPage.validateLoginPageTitle();
-		Assert.assertEquals(title, "Multi lingual Cart", "Page title doesnt matched!!");
+		Assert.assertEquals(title, "Mlti lingual Cart", "Page title doesnt matched!!");
 	}
 
 	@Test(priority = 2)
