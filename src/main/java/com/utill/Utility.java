@@ -28,6 +28,7 @@ public class Utility extends TestBase {
 	public static Workbook book;
 	public static Sheet sheet;
 	public static FileInputStream fis;
+	
 
 	public static Object[][] getTestData(String sheetName) {
 		try {
@@ -58,11 +59,13 @@ public class Utility extends TestBase {
 		Select select = new Select(value);
 		return value;
 	}
+	
 	public static void takeScreenShoot() throws IOException {
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String curentDir = System.getProperty("user.dir");
-		FileUtils.copyFile(srcFile, new File(curentDir+"/Screen_Shoots/"+System.currentTimeMillis()+".png"));
+		FileUtils.copyFile(srcFile, new File(curentDir+"/Screen_Shoots/"+System.currentTimeMillis()+".jpg"));
 	}
+	
 	public static void expliciteWait(String locator) {
 		WebDriverWait wait = new WebDriverWait(driver, IMPLECITELY_WAIT_TIME);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(locator)));

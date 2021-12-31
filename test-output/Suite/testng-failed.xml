@@ -9,9 +9,9 @@
     <classes>
       <class name="com.tests.LoginPageTest">
         <methods>
+          <include name="validateUserNameTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="validatLoginPageTitleTest"/>
         </methods>
       </class> <!-- com.tests.LoginPageTest -->
     </classes>

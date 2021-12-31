@@ -1,202 +1,375 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" retried="2" total="5" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="31577" started-at="2021-12-30T15:33:59 EST" finished-at="2021-12-30T15:34:31 EST">
+  <suite name="Full Regression Suit" duration-ms="106691" started-at="2021-12-30T21:57:16 EST" finished-at="2021-12-30T21:59:03 EST">
     <groups>
+      <group name="REGISTRATION FUNCTION">
+        <method signature="RegistrationPageTest.insertNewUserDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="insertNewUserDetailsTest" class="com.tests.RegistrationPageTest"/>
+      </group> <!-- REGISTRATION FUNCTION -->
+      <group name="LOGIN FUNCTIONS">
+        <method signature="LoginPageTest.loginTest()[pri:2, instance:com.tests.LoginPageTest@4923ab24]" name="loginTest" class="com.tests.LoginPageTest"/>
+      </group> <!-- LOGIN FUNCTIONS -->
+      <group name="UI FUNCTIONS">
+        <method signature="HomePageTest.HomePageTitle()[pri:1, instance:com.tests.HomePageTest@43bd930a]" name="HomePageTitle" class="com.tests.HomePageTest"/>
+        <method signature="HomePageTest.validateAboutUsLinkTest()[pri:3, instance:com.tests.HomePageTest@43bd930a]" name="validateAboutUsLinkTest" class="com.tests.HomePageTest"/>
+        <method signature="HomePageTest.validateLoginSourceButtonTest()[pri:2, instance:com.tests.HomePageTest@43bd930a]" name="validateLoginSourceButtonTest" class="com.tests.HomePageTest"/>
+        <method signature="LoginPageTest.validatLoginPageTitleTest()[pri:1, instance:com.tests.LoginPageTest@4923ab24]" name="validatLoginPageTitleTest" class="com.tests.LoginPageTest"/>
+        <method signature="LoginPageTest.validateUserNameTest()[pri:3, instance:com.tests.LoginPageTest@4923ab24]" name="validateUserNameTest" class="com.tests.LoginPageTest"/>
+        <method signature="RegistrationPageTest.validatPageTitleTest()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="validatPageTitleTest" class="com.tests.RegistrationPageTest"/>
+      </group> <!-- UI FUNCTIONS -->
+      <group name="UI LIST FUNCTIONS">
+        <method signature="HomePageTest.verifyCurrencyListTest()[pri:4, instance:com.tests.HomePageTest@43bd930a]" name="verifyCurrencyListTest" class="com.tests.HomePageTest"/>
+      </group> <!-- UI LIST FUNCTIONS -->
     </groups>
-    <test name="Test" duration-ms="31577" started-at="2021-12-30T15:33:59 EST" finished-at="2021-12-30T15:34:31 EST">
+    <test name="Test" duration-ms="106691" started-at="2021-12-30T21:57:16 EST" finished-at="2021-12-30T21:59:03 EST">
       <class name="com.tests.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.LoginPageTest@7403c468]" name="setUp" is-config="true" duration-ms="6748" started-at="2021-12-30T15:33:59 EST" finished-at="2021-12-30T15:34:06 EST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.LoginPageTest@4923ab24]" name="setUp" is-config="true" duration-ms="5722" started-at="2021-12-30T21:57:16 EST" finished-at="2021-12-30T21:57:22 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="validatLoginPageTitleTest()[pri:1, instance:com.tests.LoginPageTest@7403c468]" name="validatLoginPageTitleTest" duration-ms="770" retried="true" started-at="2021-12-30T15:34:06 EST" finished-at="2021-12-30T15:34:07 EST">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Page title doesnt matched!! expected [Mlti lingual Cart] but found [Multi lingual Cart]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Page title doesnt matched!! expected [Mlti lingual Cart] but found [Multi lingual Cart]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at com.tests.LoginPageTest.validatLoginPageTitleTest(LoginPageTest.java:40)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1259)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="validatLoginPageTitleTest()[pri:1, instance:com.tests.LoginPageTest@4923ab24]" name="validatLoginPageTitleTest" duration-ms="859" started-at="2021-12-30T21:57:22 EST" finished-at="2021-12-30T21:57:23 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatLoginPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.LoginPageTest@7403c468]" name="tearDown" is-config="true" duration-ms="108" started-at="2021-12-30T15:34:07 EST" finished-at="2021-12-30T15:34:07 EST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.LoginPageTest@4923ab24]" name="tearDown" is-config="true" duration-ms="89" started-at="2021-12-30T21:57:23 EST" finished-at="2021-12-30T21:57:23 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.LoginPageTest@7403c468]" name="setUp" is-config="true" duration-ms="4757" started-at="2021-12-30T15:34:07 EST" finished-at="2021-12-30T15:34:12 EST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.LoginPageTest@4923ab24]" name="setUp" is-config="true" duration-ms="4787" started-at="2021-12-30T21:57:23 EST" finished-at="2021-12-30T21:57:28 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="validatLoginPageTitleTest()[pri:1, instance:com.tests.LoginPageTest@7403c468]" name="validatLoginPageTitleTest" duration-ms="737" retried="true" started-at="2021-12-30T15:34:12 EST" finished-at="2021-12-30T15:34:13 EST">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Page title doesnt matched!! expected [Mlti lingual Cart] but found [Multi lingual Cart]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Page title doesnt matched!! expected [Mlti lingual Cart] but found [Multi lingual Cart]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at com.tests.LoginPageTest.validatLoginPageTitleTest(LoginPageTest.java:40)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1259)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatLoginPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.LoginPageTest@7403c468]" name="tearDown" is-config="true" duration-ms="115" started-at="2021-12-30T15:34:13 EST" finished-at="2021-12-30T15:34:13 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.LoginPageTest@7403c468]" name="setUp" is-config="true" duration-ms="5234" started-at="2021-12-30T15:34:13 EST" finished-at="2021-12-30T15:34:18 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="validatLoginPageTitleTest()[pri:1, instance:com.tests.LoginPageTest@7403c468]" name="validatLoginPageTitleTest" duration-ms="558" started-at="2021-12-30T15:34:18 EST" finished-at="2021-12-30T15:34:18 EST">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Page title doesnt matched!! expected [Mlti lingual Cart] but found [Multi lingual Cart]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Page title doesnt matched!! expected [Mlti lingual Cart] but found [Multi lingual Cart]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at com.tests.LoginPageTest.validatLoginPageTitleTest(LoginPageTest.java:40)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1259)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatLoginPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.LoginPageTest@7403c468]" name="tearDown" is-config="true" duration-ms="80" started-at="2021-12-30T15:34:18 EST" finished-at="2021-12-30T15:34:19 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.LoginPageTest@7403c468]" name="setUp" is-config="true" duration-ms="3969" started-at="2021-12-30T15:34:19 EST" finished-at="2021-12-30T15:34:22 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTest()[pri:2, instance:com.tests.LoginPageTest@7403c468]" name="loginTest" duration-ms="668" started-at="2021-12-30T15:34:22 EST" finished-at="2021-12-30T15:34:23 EST">
+        <test-method status="PASS" signature="loginTest()[pri:2, instance:com.tests.LoginPageTest@4923ab24]" name="loginTest" duration-ms="790" started-at="2021-12-30T21:57:28 EST" finished-at="2021-12-30T21:57:28 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.LoginPageTest@7403c468]" name="tearDown" is-config="true" duration-ms="85" started-at="2021-12-30T15:34:23 EST" finished-at="2021-12-30T15:34:23 EST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.LoginPageTest@4923ab24]" name="tearDown" is-config="true" duration-ms="83" started-at="2021-12-30T21:57:28 EST" finished-at="2021-12-30T21:57:29 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.LoginPageTest@7403c468]" name="setUp" is-config="true" duration-ms="4711" started-at="2021-12-30T15:34:23 EST" finished-at="2021-12-30T15:34:28 EST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.LoginPageTest@4923ab24]" name="setUp" is-config="true" duration-ms="4748" started-at="2021-12-30T21:57:29 EST" finished-at="2021-12-30T21:57:33 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateUserNameTest()[pri:3, instance:com.tests.LoginPageTest@7403c468]" name="validateUserNameTest" duration-ms="2807" started-at="2021-12-30T15:34:28 EST" finished-at="2021-12-30T15:34:31 EST">
+        <test-method status="PASS" signature="validateUserNameTest()[pri:3, instance:com.tests.LoginPageTest@4923ab24]" name="validateUserNameTest" duration-ms="2946" started-at="2021-12-30T21:57:33 EST" finished-at="2021-12-30T21:57:36 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateUserNameTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.LoginPageTest@7403c468]" name="tearDown" is-config="true" duration-ms="119" started-at="2021-12-30T15:34:31 EST" finished-at="2021-12-30T15:34:31 EST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.LoginPageTest@4923ab24]" name="tearDown" is-config="true" duration-ms="93" started-at="2021-12-30T21:57:36 EST" finished-at="2021-12-30T21:57:36 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.tests.LoginPageTest -->
+      <class name="com.tests.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.HomePageTest@43bd930a]" name="setUp" is-config="true" duration-ms="4751" started-at="2021-12-30T21:57:36 EST" finished-at="2021-12-30T21:57:41 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="HomePageTitle()[pri:1, instance:com.tests.HomePageTest@43bd930a]" name="HomePageTitle" duration-ms="17" started-at="2021-12-30T21:57:41 EST" finished-at="2021-12-30T21:57:41 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomePageTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.HomePageTest@43bd930a]" name="tearDown" is-config="true" duration-ms="83" started-at="2021-12-30T21:57:41 EST" finished-at="2021-12-30T21:57:41 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.HomePageTest@43bd930a]" name="setUp" is-config="true" duration-ms="3843" started-at="2021-12-30T21:57:41 EST" finished-at="2021-12-30T21:57:45 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateLoginSourceButtonTest()[pri:2, instance:com.tests.HomePageTest@43bd930a]" name="validateLoginSourceButtonTest" duration-ms="183" started-at="2021-12-30T21:57:45 EST" finished-at="2021-12-30T21:57:45 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginSourceButtonTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.HomePageTest@43bd930a]" name="tearDown" is-config="true" duration-ms="93" started-at="2021-12-30T21:57:45 EST" finished-at="2021-12-30T21:57:45 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.HomePageTest@43bd930a]" name="setUp" is-config="true" duration-ms="4644" started-at="2021-12-30T21:57:45 EST" finished-at="2021-12-30T21:57:50 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateAboutUsLinkTest()[pri:3, instance:com.tests.HomePageTest@43bd930a]" name="validateAboutUsLinkTest" duration-ms="1419" started-at="2021-12-30T21:57:50 EST" finished-at="2021-12-30T21:57:51 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAboutUsLinkTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.HomePageTest@43bd930a]" name="tearDown" is-config="true" duration-ms="139" started-at="2021-12-30T21:57:51 EST" finished-at="2021-12-30T21:57:52 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.HomePageTest@43bd930a]" name="setUp" is-config="true" duration-ms="5068" started-at="2021-12-30T21:57:52 EST" finished-at="2021-12-30T21:57:57 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyCurrencyListTest()[pri:4, instance:com.tests.HomePageTest@43bd930a]" name="verifyCurrencyListTest" duration-ms="505" started-at="2021-12-30T21:57:57 EST" finished-at="2021-12-30T21:57:57 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCurrencyListTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.HomePageTest@43bd930a]" name="tearDown" is-config="true" duration-ms="83" started-at="2021-12-30T21:57:57 EST" finished-at="2021-12-30T21:57:57 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tests.HomePageTest -->
+      <class name="com.tests.RegistrationPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="setUp" is-config="true" duration-ms="3839" started-at="2021-12-30T21:57:57 EST" finished-at="2021-12-30T21:58:01 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="insertNewUserDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="insertNewUserDetailsTest" duration-ms="7342" started-at="2021-12-30T21:58:01 EST" data-provider="getDatafromExcel" finished-at="2021-12-30T21:58:09 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[noemail1@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Noone1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234n]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234n]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Regression]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Test_1]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[NIETHER]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertNewUserDetailsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="tearDown" is-config="true" duration-ms="86" started-at="2021-12-30T21:58:09 EST" finished-at="2021-12-30T21:58:09 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="setUp" is-config="true" duration-ms="4742" started-at="2021-12-30T21:58:09 EST" finished-at="2021-12-30T21:58:14 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="insertNewUserDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="insertNewUserDetailsTest" duration-ms="7213" started-at="2021-12-30T21:58:14 EST" data-provider="getDatafromExcel" finished-at="2021-12-30T21:58:21 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[noemail2@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Noone2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234n]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234n]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Regression]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Test_2]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[NIETHER]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertNewUserDetailsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="tearDown" is-config="true" duration-ms="90" started-at="2021-12-30T21:58:21 EST" finished-at="2021-12-30T21:58:21 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="setUp" is-config="true" duration-ms="4938" started-at="2021-12-30T21:58:21 EST" finished-at="2021-12-30T21:58:26 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="insertNewUserDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="insertNewUserDetailsTest" duration-ms="7094" started-at="2021-12-30T21:58:26 EST" data-provider="getDatafromExcel" finished-at="2021-12-30T21:58:33 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[noemail3@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Noone3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234n]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234n]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Regression]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Test_3]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[NIETHER]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertNewUserDetailsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="tearDown" is-config="true" duration-ms="86" started-at="2021-12-30T21:58:33 EST" finished-at="2021-12-30T21:58:33 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="setUp" is-config="true" duration-ms="4625" started-at="2021-12-30T21:58:33 EST" finished-at="2021-12-30T21:58:38 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="insertNewUserDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="insertNewUserDetailsTest" duration-ms="7085" started-at="2021-12-30T21:58:38 EST" data-provider="getDatafromExcel" finished-at="2021-12-30T21:58:45 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[noemail4@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Noone4]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234n]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234n]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Regression]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Test_4]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[NIETHER]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertNewUserDetailsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="tearDown" is-config="true" duration-ms="87" started-at="2021-12-30T21:58:45 EST" finished-at="2021-12-30T21:58:45 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="setUp" is-config="true" duration-ms="5001" started-at="2021-12-30T21:58:45 EST" finished-at="2021-12-30T21:58:50 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="insertNewUserDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="insertNewUserDetailsTest" duration-ms="7002" started-at="2021-12-30T21:58:50 EST" data-provider="getDatafromExcel" finished-at="2021-12-30T21:58:57 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[noemail5@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Noone5]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234n]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234n]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Regression]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Test_5]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[NIETHER]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertNewUserDetailsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="tearDown" is-config="true" duration-ms="85" started-at="2021-12-30T21:58:57 EST" finished-at="2021-12-30T21:58:57 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="setUp" is-config="true" duration-ms="4822" started-at="2021-12-30T21:58:57 EST" finished-at="2021-12-30T21:59:02 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validatPageTitleTest()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="validatPageTitleTest" duration-ms="1039" started-at="2021-12-30T21:59:02 EST" finished-at="2021-12-30T21:59:03 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatPageTitleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.RegistrationPageTest@64f6106c]" name="tearDown" is-config="true" duration-ms="82" started-at="2021-12-30T21:59:03 EST" finished-at="2021-12-30T21:59:03 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tests.RegistrationPageTest -->
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- Full Regression Suit -->
 </testng-results>

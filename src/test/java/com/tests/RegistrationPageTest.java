@@ -46,7 +46,7 @@ public class RegistrationPageTest extends TestBase {
 		return data;
 	}
 
-	@Test(dataProvider = "getDatafromExcel")
+	@Test(dataProvider = "getDatafromExcel", groups = "REGISTRATION FUNCTION")
 	public void insertNewUserDetailsTest(String email, String userName, String pass, String con_pass, String firstName,
 			String lastName, String addr) throws InterruptedException {
 		registrationPage.insertNewUserDetails(email, userName, pass, con_pass, firstName, lastName, addr);

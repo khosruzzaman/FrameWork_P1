@@ -1,0 +1,12 @@
+What is Log? : capturing information and Activities at the time of program execution. 
+
+Types of logs: 
+
+1. info 
+2. worn 
+3. error 
+4. fatal 
+
+How to generate the logs? use Apoche log4j API (log4j jar) 
+How it works? : it reads Log 4j configuration from log4j.properties file 
+Where to cretes; create inside resources folder

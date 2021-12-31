@@ -4,6 +4,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.AssertJUnit;
+import org.testng.IRetryAnalyzer;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
@@ -26,26 +27,26 @@ public class LoginPageTest extends TestBase {
 	}
 
 
-	@BeforeMethod
+	@BeforeMethod(groups = "LAND IN/OUT")
 	public void setUp() {
 		initialization();
 		loginPage = new LoginPage();
 		homePage = new HomePage();
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, groups = "UI FUNCTIONS")
 	public void validatLoginPageTitleTest() throws InterruptedException {
 		loginTest();
 		String title = loginPage.validateLoginPageTitle();
-		Assert.assertEquals(title, "Mlti lingual Cart", "Page title doesnt matched!!");
+		Assert.assertEquals(title, "Multi lingual Cart", "Page title doesnt matched!!");
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, groups = "LOGIN FUNCTIONS")
 	public void loginTest() {
 		loginPage.validateLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,groups = "UI FUNCTIONS")//,retryAnalyzer = com.Analizer.ReTryAnalyzer.class)
 	public void validateUserNameTest() throws InterruptedException {
 		loginTest();
 		Thread.sleep(2000);
@@ -53,7 +54,7 @@ public class LoginPageTest extends TestBase {
 	}
 
 
-	@AfterMethod
+	@AfterMethod(groups = "LAND IN/OUT")
 	public void tearDown() {
 		driver.quit();
 	}

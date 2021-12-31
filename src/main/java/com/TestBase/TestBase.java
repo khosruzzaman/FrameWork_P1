@@ -10,10 +10,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+
+import com.utill.WebEventListener;
 
 public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
+	
+	public static EventFiringWebDriver e_driver;
+	public static WebEventListener eventListener;
+	
+	
+	
 	public static String conProp = "/Users/khosruzzaman/git/FrameWork_P1/src/main/java/com/configurations/config.properties";
 	// Call to constractor
 	public TestBase() {
@@ -30,6 +39,7 @@ public class TestBase {
 	}
 	
 	public static void initialization() {
+		//Driver initialization
 		String browserName = prop.getProperty("browser");
 		if(browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver","/Users/khosruzzaman/Drivers/chromedriver");	
@@ -40,7 +50,23 @@ public class TestBase {
 		}else {
 			driver = new SafariDriver();
 		}
+		//just 4 lines
 		
+		//Listener's functions
+		e_driver = new EventFiringWebDriver(driver);
+		
+		//Create object for EventListenerHandler 
+		eventListener = new WebEventListener();
+		
+		//Register EventListener
+		e_driver.register(eventListener);
+		
+		//Assign eventdriver to driver
+		driver=e_driver;
+		
+		
+		
+		//selenium functions
 		driver.manage().deleteAllCookies();
 		driver.navigate().refresh();
 		driver.manage().window().maximize();
